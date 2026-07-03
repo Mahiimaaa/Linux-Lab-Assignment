@@ -1,0 +1,73 @@
+PROJECT WORKSPACE REPORT
+
+Question 2 – Secure Project Workspace Setup
+
+---
+
+1. Project Workspace Creation
+
+Command:
+mkdir ProjectWorkspace
+
+Observation:
+A new directory named ProjectWorkspace was successfully created. This directory serves as the main workspace for storing project-related files securely.
+
+---
+
+2. File Creation
+
+Command:
+touch plan.txt report.txt notes.txt
+
+Observation:
+Three text files were created successfully inside the project workspace. These files represent sample project documents used for permission management.
+
+---
+
+3. Default File Permissions
+
+Command:
+ls -l
+
+Observation:
+The ls -l command displayed the default permissions assigned to the newly created files. These permissions are based on the current system umask.
+
+---
+
+4. Umask Value
+
+Command:
+umask
+
+Output:
+(Replace this with your actual output)
+
+Observation:
+The umask command displays the default permission mask used when creating new files and directories. It determines which permission bits are removed from the default permissions.
+
+---
+
+5. Permission Modification
+
+Commands:
+chmod 750 .
+chmod 640 *.txt
+
+Observation:
+The workspace directory permissions were updated to allow full access to the owner, limited access to the group, and no access to others. The text files were secured by granting read and write permissions to the owner and read-only permissions to the group.
+
+---
+
+6. Ownership Verification
+
+Command:
+ls -ld .
+
+Observation:
+The ownership and permission details of the project workspace directory were successfully verified.
+
+---
+
+Conclusion
+
+A secure Linux project workspace was successfully created. Appropriate permissions and ownership settings were applied to protect the project files from unauthorized access.
