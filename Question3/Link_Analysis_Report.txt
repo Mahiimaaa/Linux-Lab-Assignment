@@ -1,0 +1,83 @@
+LINK ANALYSIS REPORT
+
+Question 3 – File System and Link Analysis
+
+---------------------------------------------------
+
+1. Original File Creation
+
+Command:
+touch original.txt
+
+Observation:
+The touch command created an empty file named original.txt which was used for creating different types of links.
+
+---------------------------------------------------
+
+2. Hard Link Creation
+
+Command:
+ln original.txt hardlink.txt
+
+Observation:
+A hard link named hardlink.txt was created. Both the original file and the hard link point to the same inode.
+
+---------------------------------------------------
+
+3. Symbolic Link Creation
+
+Command:
+ln -s original.txt softlink.txt
+
+Observation:
+A symbolic link named softlink.txt was created. It stores the path of the original file rather than sharing its inode.
+
+---------------------------------------------------
+
+4. Inode Information
+
+Command:
+ls -li
+
+Observation:
+The ls -li command displayed the inode numbers of all files. The original file and hard link had the same inode number, while the symbolic link had a different inode number.
+
+---------------------------------------------------
+
+5. Metadata Verification
+
+Command:
+stat original.txt
+stat hardlink.txt
+stat softlink.txt
+
+Observation:
+The stat command displayed detailed metadata such as inode number, permissions, ownership, timestamps and link count. The hard link shared the same inode as the original file, while the symbolic link had its own inode.
+
+---------------------------------------------------
+
+6. Deleting the Original File
+
+Command:
+rm original.txt
+ls -li
+
+Observation:
+After deleting the original file, the hard link continued to exist because it points directly to the inode. The symbolic link became broken because its target file no longer existed.
+
+---------------------------------------------------
+
+7. Link Behaviour Verification
+
+Commands:
+cat hardlink.txt
+cat softlink.txt
+
+Observation:
+The hard link was still accessible after deleting the original file. The symbolic link returned "No such file or directory", confirming that symbolic links depend on the original file path.
+
+---------------------------------------------------
+
+Conclusion
+
+This experiment demonstrated the difference between hard links and symbolic links. Hard links share the same inode and remain functional even after the original file is deleted, whereas symbolic links only reference the file path and become invalid when the original file is removed.
