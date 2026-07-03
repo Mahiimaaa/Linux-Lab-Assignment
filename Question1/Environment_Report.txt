@@ -12,7 +12,7 @@ whoami
 Output:
 mahima
 
-Observation:
+Explanation:
 The whoami command displays the username of the currently logged-in Linux user. The current user is mahima.
 
 ---------------------------------------------------
@@ -25,7 +25,7 @@ groups
 Output:
 mahima adm cdrom sudo dip plugdev users
 
-Observation:
+Explanation:
 The groups command lists all the groups associated with the current user account. These groups determine the permissions and privileges assigned to the user.
 
 ---------------------------------------------------
@@ -38,7 +38,7 @@ echo $SHELL
 Output:
 /bin/bash
 
-Observation:
+Explanation:
 The echo $SHELL command displays the default shell currently being used. The system is using the Bash shell.
 
 ---------------------------------------------------
@@ -51,7 +51,7 @@ pwd
 Output:
 /mnt/c/Users/Mahima/Linux_Lab_Assignment/Question1
 
-Observation:
+Explanation:
 The pwd command displays the complete path of the current working directory.
 
 ---------------------------------------------------
@@ -65,7 +65,7 @@ Output:
 .
 ..
 
-Observation:
+Explanation:
 The ls -la command lists all files and directories, including hidden files, along with their permissions, ownership and timestamps.
 
 ---------------------------------------------------
@@ -80,7 +80,7 @@ Result:
 4 packets received
 0% packet loss
 
-Observation:
+Explanation:
 The ping command successfully reached Google's server, confirming that the system has an active internet connection.
 
 ---------------------------------------------------
