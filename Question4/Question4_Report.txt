@@ -1,0 +1,70 @@
+QUESTION 4 REPORT
+
+Question 4 – File Access and I/O Investigation
+
+--------------------------------------------------
+
+1. Open Files Identified
+
+Command:
+lsof | head -20
+
+Explanation:
+I used the lsof command to display the list of files currently opened by running processes. The output showed the process name, PID, user, file descriptor, and the associated file.
+
+--------------------------------------------------
+
+2. File Descriptor Observations
+
+Command:
+ls -l /proc/$$/fd
+
+Explanation:
+This command displayed the file descriptors currently opened by my shell process. It showed the standard input, standard output, standard error, and terminal device links.
+
+--------------------------------------------------
+
+3. Output Redirection and Error Investigation
+
+Command:
+iostat
+
+Explanation:
+Initially, the system reported that the iostat command was not available because the required sysstat package had not been installed.
+
+--------------------------------------------------
+
+4. Installing the Required Package
+
+Commands:
+sudo apt update
+sudo apt install sysstat
+
+Explanation:
+The package lists were updated and the sysstat package was installed successfully. This made the iostat utility available for monitoring system I/O statistics.
+
+--------------------------------------------------
+
+5. Disk I/O Statistics
+
+Command:
+iostat
+
+Explanation:
+The iostat command displayed CPU utilization and disk input/output statistics. This information helps monitor storage device performance and system activity.
+
+--------------------------------------------------
+
+6. Resource Monitoring
+
+Command:
+vmstat 1 5
+
+Explanation:
+The vmstat command monitored system performance for five seconds. It displayed information about processes, memory usage, CPU utilization, and disk I/O activity in real time.
+
+--------------------------------------------------
+
+Conclusion
+
+The Linux file access and I/O investigation was completed successfully. Commands were used to examine open files, file descriptors, disk I/O statistics, and overall system resource usage, providing a better understanding of Linux file and input/output management.
