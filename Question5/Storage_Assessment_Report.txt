@@ -1,0 +1,76 @@
+STORAGE ASSESSMENT REPORT
+
+Question 5 – Storage Health Assessment and Documentation
+
+--------------------------------------------------
+
+1. Available Storage Devices
+
+Command:
+lsblk
+
+Explanation:
+I used the lsblk command to display the available storage devices and their partitions. The output showed the block devices connected to the system along with their sizes and mount points.
+
+--------------------------------------------------
+
+2. Mounted File Systems
+
+Command:
+df -h
+
+Explanation:
+The df -h command displayed all mounted file systems along with their total size, used space, available space, and usage percentage in a human-readable format.
+
+--------------------------------------------------
+
+3. Disk Usage Statistics
+
+Command:
+du -sh .
+
+Explanation:
+The du -sh . command calculated the total disk space used by the current Question5 directory. It provided a summarized view of the directory's storage usage.
+
+--------------------------------------------------
+
+4. Inode Utilization
+
+Command:
+df -i
+
+Explanation:
+The df -i command displayed inode usage for each mounted file system. This information helps determine whether the system is running low on available inodes even if disk space is sufficient.
+
+--------------------------------------------------
+
+5. System Resource Summary
+
+Command:
+free -h
+
+Explanation:
+The free -h command displayed the system's memory usage in a human-readable format. It provided information about total, used, free, shared, cached memory, and swap usage, giving an overall view of system resource utilization.
+
+--------------------------------------------------
+
+Storage Health Assessment
+
+Explanation:
+Based on the command outputs, the storage devices and mounted file systems were functioning normally. Disk usage and inode utilization indicated that sufficient storage resources were available, and no major storage issues were observed.
+
+--------------------------------------------------
+
+Recommendations for Improving Storage Utilization
+
+1. Remove unnecessary or temporary files regularly to free up disk space.
+2. Monitor disk usage and inode utilization periodically using Linux utilities.
+3. Archive or compress old files that are no longer actively used.
+4. Keep sufficient free disk space to maintain good system performance.
+5. Perform regular system maintenance and backups to ensure efficient storage management.
+
+--------------------------------------------------
+
+Conclusion
+
+The storage health assessment was successfully completed using various Linux commands. Storage devices, mounted file systems, disk usage, inode utilization, and system resource information were analyzed. The system appeared healthy, with adequate available storage and no significant resource issues.
